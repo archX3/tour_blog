@@ -110,7 +110,7 @@ class Share(BaseModel):
         db_table = 'share'
         primary_key = False
 
-class User(BaseModel):
+class Users(BaseModel):
     address = ForeignKeyField(db_column='address_id', null=True, rel_model=Address, to_field='address')
     date_registered = DateTimeField(null=True)
     dob = DateTimeField(null=True)
@@ -123,4 +123,4 @@ class User(BaseModel):
     username = CharField(null=True)
 
     class Meta:
-        db_table = 'user'
+        db_table = 'users'
